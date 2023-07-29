@@ -383,8 +383,7 @@ public: //Everything else, lol.
 
 	__inline CTFPlayerAnimState* GetAnimState()
 	{
-		static DWORD dwOffset = g_NetVars.get_offset("DT_TFPlayer", "m_hItem");
-		return *reinterpret_cast<CTFPlayerAnimState**>(this + dwOffset - 52);
+		return *reinterpret_cast<CTFPlayerAnimState**>(this + 0x1D88);
 	}
 
 	__inline void SetPoseParam(std::array<float, MAXSTUDIOPOSEPARAM> param)
